@@ -1,7 +1,7 @@
-SISTEM APLIKASI RENTAL_MOBIL
+### SISTEM RENTAL MOBIL
 
-PEJELASAN
-1. index.php
+
+### 1. index.php
 
 Halaman dashboard utama
 
@@ -17,11 +17,9 @@ Total pendapatan
 
 Menu navigasi ke Mobil, Pelanggan, Transaksi, Laporan, Profil
 
-2. config/database.php
+### 2. config/database.php
 
 File untuk koneksi database MySQL
-
-Contoh konfigurasi:
 
 <?php
 $host = "localhost";       // Host database (XAMPP: localhost, Hosting: sesuai host)
@@ -35,72 +33,65 @@ if(!$koneksi){
 }
 ?>
 
+### 3. assets/style.css
 
-Semua query CRUD di aplikasi menggunakan $koneksi ini
-
-
-3. assets/style.css
-
-File CSS untuk warna, layout, dan tabel
+File CSS untuk warna, layout, tabel
 
 Warna utama: oranye (#ff7a00)
 
 Mengatur tampilan tabel, tombol, form, dan dashboard card
 
-
-4. Folder mobil/
+### 4. Folder mobil/
 
 index.php → menampilkan semua data mobil (Read)
 
-tambah.php → form tambah mobil baru (Create)
+tambah.php → tambah mobil baru (Create)
 
-edit.php → form edit mobil (Update)
+edit.php → edit mobil (Update)
 
-hapus.php → menghapus data mobil (Delete)
+hapus.php → hapus mobil (Delete)
 
-Semua file CRUD ini menggunakan database mobil
+### 5. Folder pelanggan/
 
+index.php → menampilkan semua pelanggan
 
-5. Folder pelanggan/
+tambah.php → tambah pelanggan
 
-index.php → menampilkan semua data pelanggan
+edit.php → edit pelanggan
 
-tambah.php → form tambah pelanggan
+hapus.php → hapus pelanggan
 
-edit.php → form edit pelanggan
+Tidak menampilkan nomor telepon → menghindari warning PHP
 
-hapus.php → menghapus pelanggan
+### 6. Folder transaksi/
 
-Tidak menampilkan kolom no telepon → menghindari warning
+index.php → daftar transaksi
 
+tambah.php → tambah transaksi/sewa mobil
 
-6. Folder transaksi/
+Saat transaksi dibuat → status mobil otomatis berubah
 
-index.php → menampilkan daftar transaksi penyewaan
+### 7. Folder laporan/
 
-tambah.php → form tambah transaksi/sewa mobil
+index.php → laporan transaksi
 
-Saat transaksi dibuat → status mobil otomatis diubah
+Fitur filter tanggal & total pendapatan
 
-Menampilkan informasi mobil, pelanggan, tanggal sewa, lama, total biaya, dan status
+Header tabel berwarna oranye
 
-
-7. Folder laporan/
-
-index.php → menampilkan laporan transaksi
-
-Fitur filter tanggal dan total pendapatan
-
-Tabel tetap konsisten dengan warna oranye untuk header
-
-
-8. login.php & logout.php
+### 8. login.php & logout.php
 
 login.php → login admin
 
 logout.php → hapus session & redirect ke login
 
-Untuk akses :
+### 9. README.md
+
+Dokumentasi aplikasi
+
+Menjelaskan struktur folder, cara instalasi, fitur CRUD, dan cara pakai
+
+### 10Untuk akses :
 http://localhost/rental_mobil/index.php (Dasboard)
 
 http://localhost/rental_mobil/mobil/index.php
