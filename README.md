@@ -17,33 +17,6 @@ Total pendapatan
 
 Menu navigasi ke Mobil, Pelanggan, Transaksi, Laporan, Profil
 
-
-rental_mobil/
-├── index.php
-├── config/
-│   └── database.php
-├── assets/
-│   └── style.css
-├── mobil/
-│   ├── index.php
-│   ├── tambah.php
-│   ├── edit.php
-│   └── hapus.php
-├── pelanggan/
-│   ├── index.php
-│   ├── tambah.php
-│   ├── edit.php
-│   └── hapus.php
-├── transaksi/
-│   ├── index.php
-│   ├── tambah.php
-├── laporan/
-│   └── index.php
-├── login.php
-├── logout.php
-└── README.md
-
-
 2. config/database.php
 
 File untuk koneksi database MySQL
