@@ -1,35 +1,152 @@
 ### SISTEM RENTAL MOBIL
 
----
+Aplikasi Web Rental Mobil adalah aplikasi berbasis PHP dan MySQL yang digunakan untuk mengelola proses penyewaan mobil, mulai dari pendataan mobil, pelanggan, transaksi, hingga laporan. Aplikasi ini dibuat untuk memenuhi kebutuhan tugas perkuliahan dan menerapkan konsep CRUD (Create, Read, Update, Delete).
 
-## Penjelasan Folder & File
+### Fitur Utama Aplikasi
+### 1. Dashboard
 
-### 1. `index.php`
-- Halaman dashboard utama
-- Menampilkan ringkasan:
-  - Stok mobil
-  - Mobil tersedia
-  - Jumlah pelanggan
-  - Total pendapatan
-- Menu navigasi ke Mobil, Pelanggan, Transaksi, Laporan, Profil
+Menampilkan ringkasan data:
 
-### 2. `config/database.php`
-- File untuk koneksi database MySQL
-```php
-<?php
-$host = "localhost";       // Host database (XAMPP: localhost, Hosting: sesuai host)
-$user = "root";            // Username database
-$pass = "";                // Password database
-$db   = "rental_mobil";    // Nama database
+Total mobil
 
-$koneksi = mysqli_connect($host, $user, $pass, $db);
-if(!$koneksi){
-    die("KONEKSI DATABASE GAGAL: " . mysqli_connect_error());
-}
-?> '''
+Mobil tersedia
+
+Jumlah pelanggan
+
+Total pendapatan
+
+Menyediakan navigasi ke menu:
+
+Data Mobil
+
+Data Pelanggan
+
+Transaksi
+
+Laporan
+
+Profil
+
+### 2. Manajemen Data Mobil
+
+Fitur ini digunakan untuk mengelola data mobil yang tersedia untuk disewa.
+Fungsi yang tersedia:
+
+Menampilkan daftar mobil
+
+Menambahkan data mobil baru
+
+Mengedit data mobil
+
+Menghapus data mobil
+
+Setiap mobil memiliki status:
+
+Tersedia
+
+Tidak Tersedia
+Status akan otomatis berubah saat mobil disewa.
+
+### 3. Manajemen Data Pelanggan
+
+Digunakan untuk menyimpan dan mengelola data pelanggan.
+Fungsi yang tersedia:
+
+Menampilkan data pelanggan
+
+Menambahkan pelanggan baru
+
+Mengedit data pelanggan
+
+Menghapus data pelanggan
+
+Catatan:
+
+Nomor telepon tidak ditampilkan untuk menghindari warning PHP.
+
+### 4. Transaksi Penyewaan
+
+Digunakan untuk mencatat proses penyewaan mobil.
+Fungsi transaksi:
+
+Memilih pelanggan
+
+Memilih mobil yang masih tersedia
+
+Menentukan tanggal dan lama sewa
+
+Menghitung total biaya secara otomatis
+
+Saat transaksi berhasil:
+
+Data transaksi tersimpan ke database
+
+Status mobil otomatis berubah menjadi Tidak Tersedia
+
+### 5. Laporan Transaksi
+
+Digunakan untuk melihat rekap transaksi penyewaan.
+Fitur laporan:
+
+Menampilkan daftar transaksi
+
+Filter transaksi berdasarkan tanggal
+
+Menampilkan total pendapatan
+
+Tampilan tabel dengan header berwarna oranye
+
+### 6. Login & Logout
+
+Login digunakan untuk membatasi akses ke aplikasi (admin)
+
+Logout akan menghapus session dan mengarahkan kembali ke halaman login
+
+### 7. Database
+
+Aplikasi menggunakan database MySQL dengan nama database: rental_mobil
+Database berisi tabel utama:
+
+Admin
+
+Mobil
+
+Pelanggan
+
+Transaksi
+
+Users
+
+Koneksi database disesuaikan dengan:
+
+XAMPP → localhost
+
+Hosting → https://cindyrentalmobil.42web.io/rental_mobil/
+
+### 8. Teknologi yang Digunakan
+
+PHP (Native)
+
+MySQL
+
+HTML
+
+CSS
+
+Apache (XAMPP / Hosting)
+
+### 9. Tujuan Pembuatan
+
+Menerapkan konsep CRUD
+
+Melatih penggunaan PHP & MySQL
+
+Membuat aplikasi web sederhana yang fungsional
+
+Memenuhi tugas mata kuliah Rekayasa Perangkat Lunak
 
 
-### 10Untuk akses :
+### 10 Untuk akses :
 http://localhost/rental_mobil/index.php (Dasboard)
 
 http://localhost/rental_mobil/mobil/index.php
